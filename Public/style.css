@@ -8,7 +8,7 @@
    
     /* Neutral */
 --Dark-Grayish-Blue: hsl(210, 10%, 33%);
---Grayish-Blue: hsl(201, 11%, 66%);
+--Grayish-Blue: hsl(200, 9%, 62%);
 
     /* Font */
     --Bai-Jamjuree: 'Bai Jamjuree', sans-serif;
@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 html{
     font-family: var(--Bai-Jamjuree);
@@ -79,9 +80,8 @@ html{
     color: white;
     border-radius: 10em;
     margin: 15px 35px;
-    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
     transition: background-color .4s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .iosVersion{
@@ -102,7 +102,7 @@ html{
 
 
 .track{
-    padding: 50px;
+    padding: 10px;
 }
 
 /* TRACK TITTLE */
@@ -128,29 +128,34 @@ html{
 /* TRACK INFO */
 
 .track__info{
-    margin-top: 40px;
     flex-wrap: wrap;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-bottom: 40px;
 } 
 
 
-.detail__feature
-/* .info__right{
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-} */
+.detail__feature{
+    margin-left: 15%;
+    width: 50%;
+}
 
+.info__right{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
 .info__right  h3 {
-    font-size: 20px;
+    font-size: 25px;
     color: var(--Dark-Grayish-Blue);
     margin-top: 10px;
-    
+    margin-bottom: 7px;
+}
+.info__right p{
+    font-size: 17px;
+    color: var(--Grayish-Blue);
 }
 
 .track__info img{
@@ -158,3 +163,39 @@ html{
     width: 600px;
     margin: auto;
 }
+
+
+@media screen and (max-width: 500px){
+   
+    .header__content{
+        padding: 40px;
+    }
+    
+    .header__info{
+        max-width: 80%;
+        margin: auto;
+    }
+    .track__info h1{
+        font-size: 2.4rem;
+        font-weight: 600
+    }
+    .track__tittle h2{
+        max-width: 100%;
+        margin: auto;
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+    .header__buttons{
+        margin-top: 7px;
+    }
+    .detail__feature{
+        margin-bottom: 1.1em;
+        width: 80%;
+    }
+    .info__right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+   
